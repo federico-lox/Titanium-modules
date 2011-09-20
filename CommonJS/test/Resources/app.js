@@ -1,4 +1,35 @@
-require('lib/com.lox.CommonJS').init(this);
+require('lib/com.lox.CommonJS').initialize(this);
+
+var one = require(['modules/com.test.one', 'modules/com.test.two', 'lib/test.js'], function(modOne, modTwo){
+	console.log('from callback');
+	console.log(modOne.a);
+	console.log(modOne.b());
+	console.log(modTwo.c);
+	console.log(modTwo.d);
+});
+
+console.log('from context');
+console.log(one.a);
+console.log(one.b());
+
+
+var three = require('modules/com.test.three');
+
+console.log(three.a1);
+console.log(three.b2);
+
+var four = require('modules/com.test.four');
+
+console.log(four.value);
+
+var five = require('modules/com.test.five');
+
+console.log(five.value);
+
+var six = require('modules/com.test.six');
+
+console.log(six.value);
+console.log(six.value2);
 
 (function(){
 	var window = Ti.UI.createWindow({
@@ -8,7 +39,7 @@ require('lib/com.lox.CommonJS').init(this);
 		exitOnClose: true
 	});
 	
-	window.open;
+	window.open();
 	
-	console.log('asdasdasd');
+	console.log('created', window);
 })();
