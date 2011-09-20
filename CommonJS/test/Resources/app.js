@@ -1,6 +1,6 @@
 require('lib/com.lox.CommonJS').initialize(this);
 
-var one = require(['modules/com.test.one', 'modules/com.test.two', 'lib/test.js'], function(modOne, modTwo){
+var one = require(['modules/com.test.one', 'modules/com.test.two', 'includes/test.js'], function(modOne, modTwo){
 	console.log('from callback');
 	console.log(modOne.a);
 	console.log(modOne.b());
