@@ -1,7 +1,10 @@
 /**
+ * Enhanced CommonJS support for Titanium Mobile SDK
+ *
  * @module Ti.CommonJS
  * @version 0.1
  * @author Federico "Lox" Lucignano <federico.lox(at)gmail.com>
+ * @see https://github.com/federico-lox/Titanium-modules
  */
 (function() {
 	/**
