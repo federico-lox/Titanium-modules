@@ -1,5 +1,7 @@
 /**
- * @namespace com.lox.CommonJS
+ * @module Ti.CommonJS
+ * @version 0.1
+ * @author Federico "Lox" Lucignano <federico.lox(at)gmail.com>
  */
 (function() {
 	/**
@@ -7,12 +9,8 @@
 	 */
 	
 	var moduleContext = this,
-	name = 'CommonJS enhancements for Titanium',
-	version = '0.1',
 	importFunction,
 	globalContext;
-	
-	Ti.API.info(String.format('%s v%s', name, version));
 	
 	function appendModuleTo(moduleID, modulesArray){
 		if(moduleID.indexOf('.js') == (moduleID.length - 3))

@@ -1,4 +1,4 @@
-require('lib/com.lox.CommonJS').initialize(this);
+require('Ti.CommonJS').initialize(this);
 
 var one = require(['modules/com.test.one', 'modules/com.test.two', 'includes/test.js'], function(modOne, modTwo){
 	console.log('from callback');
@@ -30,6 +30,9 @@ var six = require('modules/com.test.six');
 
 console.log(six.value);
 console.log(six.value2);
+
+for(var p in Ti.CommonJS)
+	console.log(p);
 
 (function(){
 	var window = Ti.UI.createWindow({
