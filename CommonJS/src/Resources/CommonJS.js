@@ -2,7 +2,7 @@
  * Enhanced CommonJS support for Appcelerator's Titanium Mobile SDK
  *
  * @module CommonJS
- * @version 0.2
+ * @version 0.3
  * @author Federico "Lox" Lucignano <federico.lox(at)gmail.com>
  * @see https://github.com/federico-lox/Titanium-modules
  */
@@ -12,6 +12,7 @@
 	 */
 	
 	var loadedModules = {},
+	queuedModules = {},
 	importFunction;
 	
 	/**
@@ -121,29 +122,34 @@
 		isJsInclude,
 		x,
 		y;
-		
 		if(!(moduleId instanceof Array))
 			moduleId = [moduleId];
 		
 		for(x = 0, y = moduleId.length; x < y; x++){
-			module = loadedModules[moduleId[x]];
-			
-			if(!module){
-				if(moduleId[x].indexOf('.js') == (moduleId[x].length - 3)){
-					Ti.include(moduleId[x]);
-					module = moduleId[x];
-					isJsInclude = true;
-				}
-				else{
-					module = importFunction(moduleId[x]);
-					isJsInclude = false;
+			//avoid circular dependencies
+			if(!(moduleId[x] in queuedModules)){
+				queuedModules[moduleId[x]] = null;
+				module = loadedModules[moduleId[x]];
+				
+				if(!module){
+					if(moduleId[x].indexOf('.js') == (moduleId[x].length - 3)){
+						Ti.include(moduleId[x]);
+						module = moduleId[x];
+						isJsInclude = true;
+					}
+					else{
+						module = importFunction(moduleId[x]);
+						isJsInclude = false;
+					}
+					
+					loadedModules[moduleId[x]] = module;
 				}
 				
-				loadedModules[moduleId[x]] = module;
+				if(module && !isJsInclude)
+					modules.push(module);
+				
+				delete queuedModules[moduleId[x]];
 			}
-			
-			if(module && !isJsInclude)
-				modules.push(module);
 		}
 		
 		if(typeof callback == 'function')

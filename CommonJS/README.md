@@ -12,9 +12,11 @@ This module updates Titanium's support to CommonJS by introducing a working impl
 
 A fix for the [mutliple execution of imported modules's code](http://jira.appcelerator.org/browse/TIMOB-4845) is also included, this means that a reference to a module is global and shared across define and require calls in an execution context.
 
+Circular dependencies are also correctly handled via a queue mechanism.
+
 Goal
 ----
-The reason behind this module is to ma the creation of CommonJS modules that work across multiple environments easier, the syntax enabled by this module works for the following:
+The reason behind this module is to allow the creation of CommonJS modules that work across multiple environments easier, the syntax enabled by this module works for the following:
 
 * Web browsers (via Require.js)
 * Node.js (using the simplified define wrapper)
