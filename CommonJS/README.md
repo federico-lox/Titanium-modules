@@ -48,7 +48,7 @@ Usage
 		//OR
 		
 		require(['myMod', 'myMod2'], function(myMod, myMod2){ /*code that depends on both modules*/ });
-4. An implementation of the console object that maps to the logging methods in the Titanium.API namespaceis also
+4. An implementation of the console object that maps to the logging methods in the Titanium.API namespace is also
    part of this module:
    
 		console.log('test');
