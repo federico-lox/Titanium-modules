@@ -1,4 +1,4 @@
-require('Ti.CommonJS').initialize(this);
+require('CommonJS').initialize(this);
 
 var one = require(['modules/com.test.one', 'modules/com.test.two', 'includes/test.js'], function(modOne, modTwo){
 	console.log('from callback');
@@ -10,6 +10,10 @@ var one = require(['modules/com.test.one', 'modules/com.test.two', 'includes/tes
 
 console.log('from context');
 console.log(one.a);
+
+console.log('incrementing com.test.one.a to test global references');
+one.a++;
+
 console.log(one.b());
 
 

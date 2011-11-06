@@ -10,10 +10,10 @@
     <id>com.lox.CommonJsTest</id>
     <name>CommonJS</name>
     <version>0.1</version>
-    <publisher>Federico Lucignano</publisher>
-    <url>http://loxzone.tumblr.com</url>
-    <description>Tests for the CommonJS module</description>
-    <copyright>2011 by Federico Lucignano</copyright>
+    <publisher>Federico \"Lox\" Lucignano</publisher>
+    <url>http://lox-o-drome.blogspot.com</url>
+    <description>Tests for the Titamium's CommonJS module</description>
+    <copyright>2011 by Federico \"Lox\" Lucignano</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -26,6 +26,9 @@
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
         <orientations device="ipad">
             <orientation>Ti.UI.PORTRAIT</orientation>
