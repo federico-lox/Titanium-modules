@@ -23,8 +23,11 @@ The reason behind this module is to ma the creation of CommonJS modules that wor
 Usage
 -----
 1. In your app.js add:
+
 		require('CommonJS').initialize(this);
-2. In your modules' files you can now use the following syntaxes (please notice the last parameter fo each define call is exports, this is required and won't generate errors in platforms different from Titanium):
+2. In your modules' files you can now use the following syntaxes (please notice the last parameter fo each define
+   call is exports, this is required and won't generate errors in platforms different from Titanium):
+
 		define({a:1, b:2}, exports);
 		
 		//OR
@@ -39,6 +42,7 @@ Usage
 		
 		define(function(require, exports, module){ exports.name = 'Jhon'; }, exports);
 3. Whenever importing a module you can use the following syntaxes:
+
 		var myMod = require('myMod');
 		
 		//OR
@@ -46,6 +50,7 @@ Usage
 		require(['myMod', 'myMod2'], function(myMod, myMod2){ /*code that depends on both modules*/ });
 4. An implementation of the console object that maps to the logging methods in the Titanium.API namespaceis also
    part of this module:
+   
 		console.log('test');
 		console.info('test');
 		console.debug('test');
@@ -55,4 +60,4 @@ Usage
 
 Author
 ------
-* [Federico "Lox" Lucignano](http://plus.google.com/117046182016070432246) <federico.lox(at)gmail.com>
+* [Federico "Lox" Lucignano](http://plus.google.com/117046182016070432246)
