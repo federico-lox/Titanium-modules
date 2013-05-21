@@ -5,6 +5,7 @@ A collection of modules (both native and pure Javascript) for Appcelerator's Tit
 Modules
 -------
 * CommonJS
+* DART
 
 Author
 ------

@@ -1,0 +1,8 @@
+#appname:DARTtest
+#publisher:Federico Lucignano
+#url:http://www.wikia.com
+#image:appicon.png
+#appid:com.wikia.DARTtest
+#desc:An example app for testing DART integration with Titanium
+#type:ipad
+#guid:c54efea5-f638-4a4b-8e30-98f82b47878f

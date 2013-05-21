@@ -1,0 +1,6 @@
+DART Server-side tagging for Titanium Mobile
+version: 1.0
+author: Federico "Lox" Lucignano <federico(at)wikia-inc.com>
+
+The actual module file is hosted in the test/Resources/lib folder which is symlinked in the module's root
+folder for practical reasons.
