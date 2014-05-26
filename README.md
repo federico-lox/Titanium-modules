@@ -2,6 +2,8 @@ Titanium modules
 ================
 A collection of modules (both native and pure Javascript) for Appcelerator's Titanium Mobile SDK.
 
+This project is **unmantained** due to the author's not using these modules for his work anymore; if you are interested in taking over please contact me.
+
 Modules
 -------
 * CommonJS
@@ -9,4 +11,4 @@ Modules
 
 Author
 ------
-* Federico "Lox" Lucignano <federico.lox(at)gmail.com>
+* [Federico "Lox" Lucignano](https://github.com/federico-lox)
